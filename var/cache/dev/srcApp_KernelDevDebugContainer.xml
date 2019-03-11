@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/home/master/symfony_doctrine/symfony_doctrine/src</parameter>
-    <parameter key="kernel.project_dir">/home/master/symfony_doctrine/symfony_doctrine</parameter>
+    <parameter key="kernel.root_dir">/home/master/symfony_doctrine/src</parameter>
+    <parameter key="kernel.project_dir">/home/master/symfony_doctrine</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
-    <parameter key="kernel.cache_dir">/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/home/master/symfony_doctrine/symfony_doctrine/var/log</parameter>
+    <parameter key="kernel.cache_dir">/home/master/symfony_doctrine/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/home/master/symfony_doctrine/var/log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="WebServerBundle">Symfony\Bundle\WebServerBundle\WebServerBundle</parameter>
@@ -26,59 +26,59 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/framework-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/symfony/framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/web-server-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/symfony/web-server-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/sensio/framework-extra-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/twig-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/symfony/twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/web-profiler-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/symfony/web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/monolog-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/symfony/monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/debug-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/symfony/debug-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="KnpMarkdownBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/knplabs/knp-markdown-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/knplabs/knp-markdown-bundle</parameter>
         <parameter key="namespace">Knp\Bundle\MarkdownBundle</parameter>
       </parameter>
       <parameter key="HttplugBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/php-http/httplug-bundle</parameter>
         <parameter key="namespace">Http\HttplugBundle</parameter>
       </parameter>
       <parameter key="NexySlackBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/nexylan/slack-bundle/src</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/nexylan/slack-bundle/src</parameter>
         <parameter key="namespace">Nexy\SlackBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/maker-bundle/src</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="DoctrineCacheBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/doctrine/doctrine-cache-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/doctrine/doctrine-cache-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineCacheBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/doctrine/doctrine-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">/home/master/symfony_doctrine/symfony_doctrine/vendor/doctrine/doctrine-migrations-bundle</parameter>
+        <parameter key="path">/home/master/symfony_doctrine/vendor/doctrine/doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
     </parameter>
@@ -102,15 +102,15 @@
       <parameter key="cookie_httponly">true</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">/home/master/symfony_doctrine/var/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/home/master/symfony_doctrine/var/cache/dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">/home/master/symfony_doctrine/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -122,7 +122,7 @@
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">/home/master/symfony_doctrine/symfony_doctrine/templates</parameter>
+    <parameter key="twig.default_path">/home/master/symfony_doctrine/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
@@ -262,9 +262,9 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/home/master/symfony_doctrine/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
-    <parameter key="doctrine_migrations.dir_name">/home/master/symfony_doctrine/symfony_doctrine/src/Migrations</parameter>
+    <parameter key="doctrine_migrations.dir_name">/home/master/symfony_doctrine/src/Migrations</parameter>
     <parameter key="doctrine_migrations.namespace">DoctrineMigrations</parameter>
     <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
     <parameter key="doctrine_migrations.column_name">version</parameter>
@@ -352,7 +352,7 @@
   <services>
     <service id="service_container" class="Symfony\Component\DependencyInjection\ContainerInterface" public="true" synthetic="true"/>
     <service id="EasyCorp\EasyLog\EasyLogHandler" class="EasyCorp\EasyLog\EasyLogHandler" public="false">
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/log/dev.log</argument>
+      <argument>/home/master/symfony_doctrine/var/log/dev.log</argument>
     </service>
     <service id="App\Command\ArticleStatsCommand" class="App\Command\ArticleStatsCommand" public="false" autowire="true" autoconfigure="true">
       <tag name="console.command"/>
@@ -369,6 +369,10 @@
       </call>
     </service>
     <service id="App\Kernel" class="App\Kernel" public="false" autowire="true" autoconfigure="true"/>
+    <service id="App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" public="false" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
     <service id="App\Service\MarkdownHelper" class="App\Service\MarkdownHelper" public="false" autowire="true" autoconfigure="true">
       <argument type="service" id="cache.app"/>
       <argument type="service" id="markdown.parser.light"/>
@@ -435,7 +439,7 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate" public="true">
       <argument type="tagged" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged" tag="kernel.cache_clearer"/>
@@ -444,9 +448,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem" public="true"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/src/Resources</argument>
+      <argument>/home/master/symfony_doctrine/src/Resources</argument>
       <argument type="collection">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/src</argument>
+        <argument>/home/master/symfony_doctrine/src</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner" public="false">
@@ -624,7 +628,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/pools</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -653,7 +657,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/pools</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -736,8 +740,8 @@
         <argument key="cache.annotations" type="service" id="cache.annotations" on-invalid="ignore_uninitialized"/>
       </argument>
     </service>
-    <service id=".1_NativeFileSessionHandler~7xHblLq" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/sessions</argument>
+    <service id=".1_NativeFileSessionHandler~weuf_rx" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>/home/master/symfony_doctrine/var/cache/dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -760,12 +764,12 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/sessions</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id=".1_NativeFileSessionHandler~7xHblLq"/>
+      <argument type="service" id=".1_NativeFileSessionHandler~weuf_rx"/>
     </service>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -862,7 +866,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/profiler</argument>
+      <argument>file:/home/master/symfony_doctrine/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -899,7 +903,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/srcApp_KernelDevDebugContainer</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/srcApp_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
@@ -967,7 +971,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" public="false">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
       <argument type="service" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -1402,7 +1406,7 @@
       <argument type="service" id=".service_locator.MAfdX1A.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev</argument>
+        <argument key="cache_dir">/home/master/symfony_doctrine/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -1444,7 +1448,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1470,12 +1474,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id=".2_PhpArrayAdapter~mnTcGsU" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/annotations.php</argument>
+    <service id=".2_PhpArrayAdapter~05M8N.A" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/home/master/symfony_doctrine/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id=".1_ArrayCache~mnTcGsU" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id=".1_ArrayCache~05M8N.A" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -1490,7 +1494,7 @@
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <tag name="annotations.cached_reader"/>
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~mnTcGsU"/>
+      <argument type="service" id=".1_ArrayCache~05M8N.A"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -1500,16 +1504,16 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/annotations.php</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!AbstractController$|Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~mnTcGsU"/>
+      <argument type="service" id=".2_PhpArrayAdapter~05M8N.A"/>
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/public</argument>
+      <argument>/home/master/symfony_doctrine/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:run</argument>
@@ -1517,7 +1521,7 @@
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command" command="server:start"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/public</argument>
+      <argument>/home/master/symfony_doctrine/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:start</argument>
@@ -1616,7 +1620,7 @@
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
         <argument key="paths" type="collection">
-          <argument key="/home/master/symfony_doctrine/symfony_doctrine/templates">null</argument>
+          <argument key="/home/master/symfony_doctrine/templates">null</argument>
         </argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -1625,9 +1629,9 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/twig</argument>
+        <argument key="cache">/home/master/symfony_doctrine/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
-        <argument key="default_path">/home/master/symfony_doctrine/symfony_doctrine/templates</argument>
+        <argument key="default_path">/home/master/symfony_doctrine/templates</argument>
         <argument key="date" type="collection">
           <argument key="format">F j, Y H:i</argument>
           <argument key="interval_format">%d days</argument>
@@ -1707,16 +1711,16 @@
       <argument type="service" id=".service_locator.lSIKWsr.twig.cache_warmer"/>
       <argument>null</argument>
       <argument type="collection">
-        <argument key="/home/master/symfony_doctrine/symfony_doctrine/templates">null</argument>
+        <argument key="/home/master/symfony_doctrine/templates">null</argument>
       </argument>
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/src</argument>
+      <argument>/home/master/symfony_doctrine/src</argument>
       <argument type="collection">
-        <argument key="/home/master/symfony_doctrine/symfony_doctrine/templates">null</argument>
+        <argument key="/home/master/symfony_doctrine/templates">null</argument>
       </argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/templates</argument>
+      <argument>/home/master/symfony_doctrine/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
@@ -1727,60 +1731,60 @@
     <service id="twig.loader.native_filesystem" class="Symfony\Bundle\TwigBundle\Loader\NativeFilesystemLoader" public="false">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/templates</argument>
+        <argument>/home/master/symfony_doctrine/templates</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/framework-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/framework-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/framework-bundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views</argument>
         <argument>!Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/debug-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/debug-bundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/debug-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/symfony/debug-bundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views</argument>
         <argument>Httplug</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views</argument>
         <argument>!Httplug</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/master/symfony_doctrine/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/templates</argument>
+        <argument>/home/master/symfony_doctrine/templates</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -1806,7 +1810,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -1866,10 +1870,10 @@
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
       <argument type="service" id="twig"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/templates</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/src</argument>
+      <argument>/home/master/symfony_doctrine/templates</argument>
+      <argument>/home/master/symfony_doctrine/src</argument>
       <call method="setName">
         <argument>debug:twig</argument>
       </call>
@@ -1881,7 +1885,7 @@
         <argument>lint:twig</argument>
       </call>
     </service>
-    <service id=".2_HtmlDumper~cKDb_6I" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+    <service id=".2_HtmlDumper~qaCZUii" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
       <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>1</argument>
@@ -1892,14 +1896,14 @@
         </argument>
       </call>
     </service>
-    <service id=".1_NonceGenerator~cKDb_6I" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+    <service id=".1_NonceGenerator~qaCZUii" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -1913,11 +1917,11 @@
       <argument type="service" id="debug.file_link_formatter"/>
     </service>
     <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
-      <argument type="service" id=".1_NonceGenerator~cKDb_6I"/>
+      <argument type="service" id=".1_NonceGenerator~qaCZUii"/>
     </service>
     <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
       <tag name="twig.extension"/>
-      <argument type="service" id=".2_HtmlDumper~cKDb_6I"/>
+      <argument type="service" id=".2_HtmlDumper~qaCZUii"/>
     </service>
     <service id="debug.file_link_formatter.url_format" class="string" public="false">
       <argument type="service" id="router.default"/>
@@ -1972,7 +1976,7 @@
     </service>
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor" public="false"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/log/dev.log</argument>
+      <argument>/home/master/symfony_doctrine/var/log/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -1981,7 +1985,7 @@
       </call>
     </service>
     <service id="monolog.handler.markdown_logging" class="Monolog\Handler\StreamHandler">
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/log/markdown.log</argument>
+      <argument>/home/master/symfony_doctrine/var/log/markdown.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -1995,19 +1999,19 @@
       <argument>true</argument>
       <argument type="collection"/>
     </service>
-    <service id=".5_HtmlDescriptor~Y_3FoZs" class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor" public="false">
+    <service id=".5_HtmlDescriptor~Lc3Jy2R" class="Symfony\Component\VarDumper\Command\Descriptor\HtmlDescriptor" public="false">
       <argument type="service" id="var_dumper.html_dumper"/>
     </service>
-    <service id=".4_CliDescriptor~Y_3FoZs" class="Symfony\Component\VarDumper\Command\Descriptor\CliDescriptor" public="false">
+    <service id=".4_CliDescriptor~Lc3Jy2R" class="Symfony\Component\VarDumper\Command\Descriptor\CliDescriptor" public="false">
       <argument type="service" id="var_dumper.cli_dumper"/>
     </service>
-    <service id=".3_CliContextProvider~Y_3FoZs" class="Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider" public="false"/>
-    <service id=".2_RequestContextProvider~Y_3FoZs" class="Symfony\Component\VarDumper\Dumper\ContextProvider\RequestContextProvider" public="false">
+    <service id=".3_CliContextProvider~Lc3Jy2R" class="Symfony\Component\VarDumper\Dumper\ContextProvider\CliContextProvider" public="false"/>
+    <service id=".2_RequestContextProvider~Lc3Jy2R" class="Symfony\Component\VarDumper\Dumper\ContextProvider\RequestContextProvider" public="false">
       <argument type="service" id="request_stack"/>
     </service>
-    <service id=".1_SourceContextProvider~Y_3FoZs" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
+    <service id=".1_SourceContextProvider~Lc3Jy2R" class="Symfony\Component\VarDumper\Dumper\ContextProvider\SourceContextProvider" public="false">
       <argument>UTF-8</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
     </service>
     <service id="twig.extension.dump" class="Symfony\Bridge\Twig\Extension\DumpExtension" public="false">
@@ -2058,9 +2062,9 @@
     <service id="var_dumper.server_connection" class="Symfony\Component\VarDumper\Server\Connection" public="false">
       <argument></argument>
       <argument type="collection">
-        <argument key="source" type="service" id=".1_SourceContextProvider~Y_3FoZs"/>
-        <argument key="request" type="service" id=".2_RequestContextProvider~Y_3FoZs"/>
-        <argument key="cli" type="service" id=".3_CliContextProvider~Y_3FoZs"/>
+        <argument key="source" type="service" id=".1_SourceContextProvider~Lc3Jy2R"/>
+        <argument key="request" type="service" id=".2_RequestContextProvider~Lc3Jy2R"/>
+        <argument key="cli" type="service" id=".3_CliContextProvider~Lc3Jy2R"/>
       </argument>
     </service>
     <service id="var_dumper.dump_server" class="Symfony\Component\VarDumper\Server\DumpServer" public="false">
@@ -2072,8 +2076,8 @@
       <tag name="console.command" command="server:dump"/>
       <argument type="service" id="var_dumper.dump_server"/>
       <argument type="collection">
-        <argument key="cli" type="service" id=".4_CliDescriptor~Y_3FoZs"/>
-        <argument key="html" type="service" id=".5_HtmlDescriptor~Y_3FoZs"/>
+        <argument key="cli" type="service" id=".4_CliDescriptor~Lc3Jy2R"/>
+        <argument key="html" type="service" id=".5_HtmlDescriptor~Lc3Jy2R"/>
       </argument>
       <call method="setName">
         <argument>server:dump</argument>
@@ -2205,13 +2209,13 @@
     <service id="httplug.plugin.query_defaults" class="Http\Client\Common\Plugin\QueryDefaultsPlugin" public="false" abstract="true">
       <argument></argument>
     </service>
-    <service id=".1_CurlCommandFormatter~FSr98B_" class="Http\Message\Formatter\CurlCommandFormatter" public="false"/>
+    <service id=".1_CurlCommandFormatter~YUAcRac" class="Http\Message\Formatter\CurlCommandFormatter" public="false"/>
     <service id="httplug.formatter.full_http_message" class="Http\Message\Formatter\FullHttpMessageFormatter" public="false">
       <argument>0</argument>
     </service>
     <service id="httplug.collector.formatter" class="Http\HttplugBundle\Collector\Formatter" public="false">
       <argument type="service" id="httplug.formatter.full_http_message"/>
-      <argument type="service" id=".1_CurlCommandFormatter~FSr98B_"/>
+      <argument type="service" id=".1_CurlCommandFormatter~YUAcRac"/>
     </service>
     <service id="httplug.collector.collector" class="Http\HttplugBundle\Collector\Collector" public="false">
       <tag name="data_collector" template="@Httplug/webprofiler.html.twig" priority="200" id="httplug"/>
@@ -2292,7 +2296,7 @@
     <service id="maker.file_manager" class="Symfony\Bundle\MakerBundle\FileManager" public="false">
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder" public="false"/>
     <service id="maker.autoloader_util" class="Symfony\Bundle\MakerBundle\Util\AutoloaderUtil" public="false">
@@ -2348,7 +2352,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
       <argument type="service" id="maker.generator"/>
     </service>
     <service id="maker.maker.make_fixtures" class="Symfony\Bundle\MakerBundle\Maker\MakeFixtures" public="false">
@@ -2398,7 +2402,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
       <tag name="maker.command"/>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine</argument>
+      <argument>/home/master/symfony_doctrine</argument>
     </service>
     <service id="doctrine_cache.abstract.apc" class="Doctrine\Common\Cache\ApcCache" abstract="true"/>
     <service id="doctrine_cache.abstract.apcu" class="Doctrine\Common\Cache\ApcuCache" abstract="true"/>
@@ -2557,7 +2561,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.9_yeNH1"/>
+      <argument type="service" id=".service_locator.qu6dVB8"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -2696,7 +2700,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>/home/master/symfony_doctrine/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2726,7 +2730,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>/home/master/symfony_doctrine/symfony_doctrine/src/Entity</argument>
+        <argument>/home/master/symfony_doctrine/src/Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -2737,17 +2741,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_8d5d57bce9913d92f30605f916665d0ace9cd0446b54fc5d513da932f49b818f</argument>
+        <argument>sf_orm_default_037a6c8801f26189f2eca82d489ffb76b2afa63ccca98200c2a3964401e65fa1</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_8d5d57bce9913d92f30605f916665d0ace9cd0446b54fc5d513da932f49b818f</argument>
+        <argument>sf_orm_default_037a6c8801f26189f2eca82d489ffb76b2afa63ccca98200c2a3964401e65fa1</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_8d5d57bce9913d92f30605f916665d0ace9cd0446b54fc5d513da932f49b818f</argument>
+        <argument>sf_orm_default_037a6c8801f26189f2eca82d489ffb76b2afa63ccca98200c2a3964401e65fa1</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -2801,6 +2805,8 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ArticleController" class="App\Controller\ArticleController" public="false" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ArticleController" class="App\Controller\ArticleController" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ArticleController" class="App\Controller\ArticleController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -3142,9 +3148,11 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.9_yeNH1" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.qu6dVB8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="App\Repository\ArticleRepository" type="service" id="App\Repository\ArticleRepository"/>
+      </argument>
     </service>
     <service id=".service_locator.AoifO_3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -3405,43 +3413,43 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
-      <argument>Sa91M8bzrL</argument>
+      <argument>gpg4myb7um</argument>
       <argument>0</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/pools</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>ai8XY-q6XY</argument>
+      <argument>OLYlGmp4gN</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/pools</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>8VkBgqPFnk</argument>
+      <argument>s1Vw-g1yGt</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/pools</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>cSsa0IAH2q</argument>
+      <argument>1cCYsgFMwN</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/pools</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>dLiTluzBVR</argument>
+      <argument>pZj3D9VR5a</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/master/symfony_doctrine/symfony_doctrine/var/cache/dev/pools</argument>
+      <argument>/home/master/symfony_doctrine/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>

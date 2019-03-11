@@ -456,6 +456,6 @@ class __TwigTemplate_01e59df609a3e8b7c7b00f9ae89c807c05c3324b76e3ee2a53ce5cea45e
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
+", "@WebProfiler/Collector/validator.html.twig", "/home/master/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
     }
 }

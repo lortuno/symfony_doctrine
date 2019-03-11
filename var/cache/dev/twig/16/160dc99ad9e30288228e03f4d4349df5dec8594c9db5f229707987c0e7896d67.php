@@ -333,6 +333,6 @@ class __TwigTemplate_66d11dad2d8d91942f8cdd1ba05fcb3b4131a4caa18c06a5b44322ed6c1
 \t</g>
 </g>
 </svg>
-", "@Httplug/Icon/httplug.svg", "/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/Icon/httplug.svg");
+", "@Httplug/Icon/httplug.svg", "/home/master/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/Icon/httplug.svg");
     }
 }

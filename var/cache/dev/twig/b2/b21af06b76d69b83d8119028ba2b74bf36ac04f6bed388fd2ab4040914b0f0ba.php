@@ -259,6 +259,6 @@ class __TwigTemplate_19aa4c6c8e4c636005ea28500b0799e54224adfe97db8f88b616c41864e
         </div>
     </div>
 {% endblock %}
-", "article/homepage.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/templates/article/homepage.html.twig");
+", "article/homepage.html.twig", "/home/master/symfony_doctrine/templates/article/homepage.html.twig");
     }
 }

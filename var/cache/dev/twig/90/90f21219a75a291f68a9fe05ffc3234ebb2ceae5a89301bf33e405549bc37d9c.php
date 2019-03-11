@@ -198,6 +198,6 @@ class __TwigTemplate_099b386d6664b2579e8cead743b7d549c97851b761dac28bf6894b2844c
     {% endfor %}
     </tbody>
 </table>
-", "@Twig/Exception/logs.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views/Exception/logs.html.twig");
+", "@Twig/Exception/logs.html.twig", "/home/master/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views/Exception/logs.html.twig");
     }
 }

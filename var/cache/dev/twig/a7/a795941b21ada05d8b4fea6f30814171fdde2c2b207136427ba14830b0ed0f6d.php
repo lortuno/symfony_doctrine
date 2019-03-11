@@ -353,6 +353,6 @@ $context["child"], "id" => ((            // line 72
         } only %}
     </div>
 {% endfor %}
-", "@Httplug/stack.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/stack.html.twig");
+", "@Httplug/stack.html.twig", "/home/master/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/stack.html.twig");
     }
 }

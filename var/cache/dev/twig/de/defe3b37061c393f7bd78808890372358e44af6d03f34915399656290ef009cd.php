@@ -411,6 +411,6 @@ class __TwigTemplate_06aea620a666401368c5e391622067f4b7abc4484031c0b7836bb4c1ad6
 .httplug-method-trace.label {
     background: #ebebeb;
 }
-", "@Httplug/style/httplug.css.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/style/httplug.css.twig");
+", "@Httplug/style/httplug.css.twig", "/home/master/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/style/httplug.css.twig");
     }
 }

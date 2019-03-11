@@ -61,6 +61,6 @@ class __TwigTemplate_d5dab6410d8931e3e01a1854d1b3aa12290ecaeb50721068bca6e574e93
         <?php endforeach; ?>
     </ul>
 <?php endif ?>
-", "@Framework/Form/form_errors.html.php", "/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/framework-bundle/Resources/views/Form/form_errors.html.php");
+", "@Framework/Form/form_errors.html.php", "/home/master/symfony_doctrine/vendor/symfony/framework-bundle/Resources/views/Form/form_errors.html.php");
     }
 }

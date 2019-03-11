@@ -464,6 +464,6 @@ $context["loop"], "index", [])]);
         {% endfor %}
     </div>
 {% endblock %}
-", "@Httplug/webprofiler.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/webprofiler.html.twig");
+", "@Httplug/webprofiler.html.twig", "/home/master/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/webprofiler.html.twig");
     }
 }

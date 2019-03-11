@@ -314,6 +314,6 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
     {{ parent() }}
 
     <script src=\"{{ asset('js/article_show.js') }}\"></script>
-{% endblock %}", "article/show.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/templates/article/show.html.twig");
+{% endblock %}", "article/show.html.twig", "/home/master/symfony_doctrine/templates/article/show.html.twig");
     }
 }

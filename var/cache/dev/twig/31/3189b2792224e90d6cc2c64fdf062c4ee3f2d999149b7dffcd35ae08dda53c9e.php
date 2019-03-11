@@ -287,6 +287,6 @@ class __TwigTemplate_34aaa7b6ba343594b26a213919a50ecd7c8b6266cc21386ad4637a39cd9
         {% endblock %}
     </body>
 </html>
-", "base.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/templates/base.html.twig");
+", "base.html.twig", "/home/master/symfony_doctrine/templates/base.html.twig");
     }
 }

@@ -65,6 +65,6 @@ class __TwigTemplate_b8287c680e10aa394d422f62a467eef29d692d60380ed771ecdbe6000e5
 {{ status_code }} {{ status_text }}
 
 */
-", "@Twig/Exception/error.js.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views/Exception/error.js.twig");
+", "@Twig/Exception/error.js.twig", "/home/master/symfony_doctrine/vendor/symfony/twig-bundle/Resources/views/Exception/error.js.twig");
     }
 }

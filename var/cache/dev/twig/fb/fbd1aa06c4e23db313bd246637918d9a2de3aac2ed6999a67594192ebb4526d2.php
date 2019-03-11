@@ -101,6 +101,6 @@ document.addEventListener(\"DOMContentLoaded\", function () {
        });
     });
 })
-", "@Httplug/script/httplug.js.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/script/httplug.js.twig");
+", "@Httplug/script/httplug.js.twig", "/home/master/symfony_doctrine/vendor/php-http/httplug-bundle/Resources/views/script/httplug.js.twig");
     }
 }

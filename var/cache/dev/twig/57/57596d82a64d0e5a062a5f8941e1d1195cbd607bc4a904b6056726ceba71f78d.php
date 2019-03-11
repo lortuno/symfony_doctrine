@@ -465,6 +465,6 @@ class __TwigTemplate_6232e4a8116e813b506cc9b4ee79c2bffc3d090d77382e07d8b6678d758
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/home/master/symfony_doctrine/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }
