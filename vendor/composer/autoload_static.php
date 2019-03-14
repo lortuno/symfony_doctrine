@@ -40,6 +40,8 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarExporter\\' => 30,
             'Symfony\\Component\\VarDumper\\' => 28,
+            'Symfony\\Component\\Translation\\' => 30,
+            'Symfony\\Component\\Templating\\' => 29,
             'Symfony\\Component\\Stopwatch\\' => 28,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\Process\\' => 26,
@@ -183,6 +185,14 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
+        ),
+        'Symfony\\Component\\Templating\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/templating',
         ),
         'Symfony\\Component\\Stopwatch\\' => 
         array (
@@ -469,6 +479,13 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
             'ProxyManager\\' => 
             array (
                 0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
+        ),
+        'K' => 
+        array (
+            'Knp\\Bundle\\TimeBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-time-bundle',
             ),
         ),
         'D' => 
