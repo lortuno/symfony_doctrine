@@ -52,7 +52,7 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Read: ";
-        echo twig_escape_filter($this->env, (isset($context["title"]) || array_key_exists("title", $context) ? $context["title"] : (function () { throw new Twig_Error_Runtime('Variable "title" does not exist.', 3, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 3, $this->source); })()), "title", []), "html", null, true);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,7 +85,7 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
                         <div class=\"show-article-title-container d-inline-block pl-3 align-middle\">
                             <span class=\"show-article-title \">";
         // line 15
-        echo twig_escape_filter($this->env, (isset($context["title"]) || array_key_exists("title", $context) ? $context["title"] : (function () { throw new Twig_Error_Runtime('Variable "title" does not exist.', 15, $this->source); })()), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 15, $this->source); })()), "title", []), "html", null, true);
         echo "</span>
                             <br>
                             <span class=\"align-left article-details\"><img class=\"article-author-img rounded-circle\" src=\"";
@@ -97,7 +97,7 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
                                 <span class=\"js-like-article-count\">5</span>
                                 <a href=\"";
         // line 21
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_toggle_heart", ["slug" => (isset($context["slug"]) || array_key_exists("slug", $context) ? $context["slug"] : (function () { throw new Twig_Error_Runtime('Variable "slug" does not exist.', 21, $this->source); })())]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_toggle_heart", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 21, $this->source); })()), "slug", [])]), "html", null, true);
         echo "\" class=\"fa fa-heart-o like-article js-like-article\"></a>
                             </span>
                         </div>
@@ -108,7 +108,7 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
                         <div class=\"article-text\">
                             ";
         // line 29
-        echo (isset($context["articleContent"]) || array_key_exists("articleContent", $context) ? $context["articleContent"] : (function () { throw new Twig_Error_Runtime('Variable "articleContent" does not exist.', 29, $this->source); })());
+        echo $this->extensions['Knp\Bundle\MarkdownBundle\Twig\Extension\MarkdownTwigExtension']->markdown(twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 29, $this->source); })()), "content", []));
         echo "
                         </div>
                     </div>
@@ -234,7 +234,7 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
     {
         return new Twig_Source("{% extends 'base.html.twig' %}
 
-{% block title %}Read: {{ title }}{% endblock %}
+{% block title %}Read: {{ article.title }}{% endblock %}
 
 {% block body %}
 
@@ -246,13 +246,13 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
                     <div class=\"col-sm-12\">
                         <img class=\"show-article-img\" src=\"{{ asset('images/asteroid.jpeg') }}\">
                         <div class=\"show-article-title-container d-inline-block pl-3 align-middle\">
-                            <span class=\"show-article-title \">{{ title }}</span>
+                            <span class=\"show-article-title \">{{ article.title }}</span>
                             <br>
                             <span class=\"align-left article-details\"><img class=\"article-author-img rounded-circle\" src=\"{{ asset('images/alien-profile.png') }}\"> Mike Ferengi </span>
                             <span class=\"pl-2 article-details\"> 4 hours ago</span>
                             <span class=\"pl-2 article-details\">
                                 <span class=\"js-like-article-count\">5</span>
-                                <a href=\"{{ path('article_toggle_heart', {slug: slug}) }}\" class=\"fa fa-heart-o like-article js-like-article\"></a>
+                                <a href=\"{{ path('article_toggle_heart', {slug: article.slug}) }}\" class=\"fa fa-heart-o like-article js-like-article\"></a>
                             </span>
                         </div>
                     </div>
@@ -260,7 +260,7 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
                 <div class=\"row\">
                     <div class=\"col-sm-12\">
                         <div class=\"article-text\">
-                            {{ articleContent|raw }}
+                            {{ article.content|markdown }}
                         </div>
                     </div>
                 </div>
@@ -314,6 +314,6 @@ class __TwigTemplate_bd4196818d147cd4668a80c9e53306f55bb572dc5a02456eafd7965fe41
     {{ parent() }}
 
     <script src=\"{{ asset('js/article_show.js') }}\"></script>
-{% endblock %}", "article/show.html.twig", "/home/master/symfony_doctrine/templates/article/show.html.twig");
+{% endblock %}", "article/show.html.twig", "/home/master/symfony_doctrine/symfony_doctrine/templates/article/show.html.twig");
     }
 }
