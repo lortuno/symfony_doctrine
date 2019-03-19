@@ -24,12 +24,35 @@ class ArticleRepository extends ServiceEntityRepository
      */
     public function findAllPublishedOrderedByNewest()
     {
-        return $this->createQueryBuilder('a')
-            ->andWhere('a.publishedAt IS NOT NULL')
-            ->orderBy('a.publishedAt', 'DESC')
-            ->getQuery()
-            ->getResult()
-        ;
+        $qb = $this->createQueryBuilder('a');
+
+        return $this->addIsPublishedQueryBuilder($qb)
+                    ->orderBy('a.publishedAt', 'DESC')
+                    ->getQuery()
+                    ->getResult();
+    }
+
+    /**
+     * Separa la lógica de where para obtener artículos publicados.
+     *
+     * @param   object $qb DQL.
+     *
+     * @return  mixed
+     */
+    private function addIsPublishedQueryBuilder(QueryBuilder $qb = null)
+    {
+        return $this->getOrCreateQueryBuilder($qb)
+                    ->andWhere('a.publishedAt IS NOT NULL');
+    }
+
+    /**
+     * Crea el QB si no existe.
+     *
+     * @return  \Doctrine\ORM\QueryBuilder
+     */
+    private function getOrCreateQueryBuilder(QueryBuilder $qb = null)
+    {
+        return $qb ?: $this->createQueryBuilder('a');
     }
 
     /*
