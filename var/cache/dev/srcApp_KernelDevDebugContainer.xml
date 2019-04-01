@@ -410,6 +410,8 @@
     </service>
     <service id="App\Twig\AppExtension" class="App\Twig\AppExtension" public="false" autowire="true" autoconfigure="true">
       <tag name="twig.extension"/>
+      <tag name="container.service_subscriber"/>
+      <argument type="service" id=".service_locator.iGXbXeX.App\Twig\AppExtension"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -1585,14 +1587,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3290,6 +3284,7 @@
     <service id=".abstract.instanceof.App\Controller\ArticleController" class="App\Controller\ArticleController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ArticleRepository" class="App\Repository\ArticleRepository" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Twig\AppExtension" class="App\Twig\AppExtension" public="false" autowire="true" abstract="true"/>
     <service id=".instanceof.Twig_ExtensionInterface.0.App\Twig\AppExtension" class="App\Twig\AppExtension" public="false" autowire="true" abstract="true"/>
     <service id=".instanceof.Twig\Extension\ExtensionInterface.0.App\Twig\AppExtension" class="App\Twig\AppExtension" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Twig\AppExtension" class="App\Twig\AppExtension" public="false" autowire="true" autoconfigure="true" abstract="true"/>
@@ -3461,10 +3456,16 @@
         <argument key="em" type="service" id="doctrine.orm.default_entity_manager"/>
       </argument>
     </service>
-    <service id=".service_locator.T1FLlUF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.l8t5dvN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="em" type="service" id="doctrine.orm.default_entity_manager"/>
+        <argument key="repository" type="service" id="App\Repository\ArticleRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.FwJXtGu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="article" type="service" id=".errored..service_locator.FwJXtGu.App\Entity\Article"/>
         <argument key="slack" type="service" id="App\Service\SlackClient"/>
       </argument>
     </service>
@@ -3474,14 +3475,16 @@
         <argument key="logger" type="service" id="monolog.logger"/>
       </argument>
     </service>
-    <service id=".service_locator.wQ_DEsr" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.j2bPdJs" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ArticleAdminController::new" type="service" id=".service_locator.pe89cNF"/>
-        <argument key="App\Controller\ArticleController::show" type="service" id=".service_locator.T1FLlUF"/>
+        <argument key="App\Controller\ArticleController::homepage" type="service" id=".service_locator.l8t5dvN"/>
+        <argument key="App\Controller\ArticleController::show" type="service" id=".service_locator.FwJXtGu"/>
         <argument key="App\Controller\ArticleController::toggleArticleHeart" type="service" id=".service_locator.1n6P8pO"/>
         <argument key="App\Controller\ArticleAdminController:new" type="service" id=".service_locator.pe89cNF"/>
-        <argument key="App\Controller\ArticleController:show" type="service" id=".service_locator.T1FLlUF"/>
+        <argument key="App\Controller\ArticleController:homepage" type="service" id=".service_locator.l8t5dvN"/>
+        <argument key="App\Controller\ArticleController:show" type="service" id=".service_locator.FwJXtGu"/>
         <argument key="App\Controller\ArticleController:toggleArticleHeart" type="service" id=".service_locator.1n6P8pO"/>
       </argument>
     </service>
@@ -3707,6 +3710,18 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
+    <service id=".service_locator.iGXbXeX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="mkd" type="service" id="App\Service\MarkdownHelper"/>
+      </argument>
+    </service>
+    <service id=".service_locator.iGXbXeX.App\Twig\AppExtension" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Twig\AppExtension"/>
+      <argument>App\Twig\AppExtension</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.iGXbXeX" method="withContext"/>
+    </service>
     <service id=".service_locator._pu.0Tb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -3814,10 +3829,11 @@
     <service id="debug.argument_resolver.request.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver" public="false"/>
     <service id="debug.argument_resolver.session.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\SessionValueResolver" public="false"/>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.wQ_DEsr"/>
+      <argument type="service" id=".service_locator.j2bPdJs"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
+    <service id=".errored..service_locator.FwJXtGu.App\Entity\Article" class="App\Entity\Article"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.jpvahHT"/>
       <argument type="collection">
@@ -4084,7 +4100,7 @@
     <service id="doctrine.orm.default_result_cache" alias="doctrine_cache.providers.doctrine.orm.default_result_cache" public="true"/>
     <service id="doctrine.orm.default_query_cache" alias="doctrine_cache.providers.doctrine.orm.default_query_cache" public="true"/>
     <service id="doctrine.orm.default_entity_manager.event_manager" alias="doctrine.dbal.default_connection.event_manager" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.wQ_DEsr"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.j2bPdJs"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="translator.data_collector.inner" alias="translator.default" public="false"/>
