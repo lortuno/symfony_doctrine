@@ -80,7 +80,7 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
                     <div class=\"col-sm-12\">
                         <img class=\"show-article-img\" src=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/asteroid.jpeg"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 13, $this->source); })()), "imagePath", [])), "html", null, true);
         echo "\">
                         <div class=\"show-article-title-container d-inline-block pl-3 align-middle\">
                             <span class=\"show-article-title \">";
@@ -88,21 +88,30 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 15, $this->source); })()), "title", []), "html", null, true);
         echo "</span>
                             <br>
-                            <span class=\"align-left article-details\"><img class=\"article-author-img rounded-circle\" src=\"";
-        // line 17
+                            <span class=\"align-left article-details\">
+                                <img class=\"article-author-img rounded-circle\" src=\"";
+        // line 18
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/alien-profile.png"), "html", null, true);
-        echo "\"> Mike Ferengi </span>
-                            <span class=\"pl-2 article-details\">
+        echo "\">
                                 ";
         // line 19
-        echo ((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 19, $this->source); })()), "publishedAt", [])) ? ($this->extensions['Knp\Bundle\TimeBundle\Twig\Extension\TimeExtension']->diff(twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 19, $this->source); })()), "publishedAt", []))) : ("unpublished"));
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 19, $this->source); })()), "author", []), "html", null, true);
         echo "
                             </span>
                             <span class=\"pl-2 article-details\">
-                                <span class=\"js-like-article-count\">5</span>
+                                ";
+        // line 22
+        echo ((twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 22, $this->source); })()), "publishedAt", [])) ? ($this->extensions['Knp\Bundle\TimeBundle\Twig\Extension\TimeExtension']->diff(twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 22, $this->source); })()), "publishedAt", []))) : ("unpublished"));
+        echo "
+                            </span>
+                            <span class=\"pl-2 article-details\">
+                                <span class=\"js-like-article-count\">  ";
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 25, $this->source); })()), "heartCount", []), "html", null, true);
+        echo " </span>
                                 <a href=\"";
-        // line 23
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_toggle_heart", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 23, $this->source); })()), "slug", [])]), "html", null, true);
+        // line 26
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("article_toggle_heart", ["slug" => twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 26, $this->source); })()), "slug", [])]), "html", null, true);
         echo "\" class=\"fa fa-heart-o like-article js-like-article\"></a>
                             </span>
                         </div>
@@ -112,8 +121,8 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
                     <div class=\"col-sm-12\">
                         <div class=\"article-text\">
                             ";
-        // line 31
-        echo $this->extensions['Knp\Bundle\MarkdownBundle\Twig\Extension\MarkdownTwigExtension']->markdown(twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 31, $this->source); })()), "content", []));
+        // line 34
+        echo $this->extensions['Knp\Bundle\MarkdownBundle\Twig\Extension\MarkdownTwigExtension']->markdown(twig_get_attribute($this->env, $this->source, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new Twig_Error_Runtime('Variable "article" does not exist.', 34, $this->source); })()), "content", []));
         echo "
                         </div>
                     </div>
@@ -126,15 +135,15 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
                 <div class=\"row\">
                     <div class=\"col-sm-12\">
                         <h3><i class=\"pr-3 fa fa-comment\"></i>";
-        // line 42
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new Twig_Error_Runtime('Variable "comments" does not exist.', 42, $this->source); })())), "html", null, true);
+        // line 45
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new Twig_Error_Runtime('Variable "comments" does not exist.', 45, $this->source); })())), "html", null, true);
         echo " Comments</h3>
                         <hr>
 
                         <div class=\"row mb-5\">
                             <div class=\"col-sm-12\">
                                 <img class=\"comment-img rounded-circle\" src=\"";
-        // line 47
+        // line 50
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/astronaut-profile.png"), "html", null, true);
         echo "\">
                                 <div class=\"comment-container d-inline-block pl-3 align-top\">
@@ -148,22 +157,22 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
                         </div>
 
                         ";
-        // line 58
+        // line 61
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new Twig_Error_Runtime('Variable "comments" does not exist.', 58, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comments"]) || array_key_exists("comments", $context) ? $context["comments"] : (function () { throw new Twig_Error_Runtime('Variable "comments" does not exist.', 61, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 59
+            // line 62
             echo "                        <div class=\"row\">
                             <div class=\"col-sm-12\">
                                 <img class=\"comment-img rounded-circle\" src=\"";
-            // line 61
+            // line 64
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/alien-profile.png"), "html", null, true);
             echo "\">
                                 <div class=\"comment-container d-inline-block pl-3 align-top\">
                                     <span class=\"commenter-name\">Mike Ferengi</span>
                                     <br>
                                     <span class=\"comment\"> ";
-            // line 65
+            // line 68
             echo twig_escape_filter($this->env, $context["comment"], "html", null, true);
             echo "</span>
                                     <p><a href=\"#\">Reply</a></p>
@@ -175,7 +184,7 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 71
+        // line 74
         echo "
                     </div>
                 </div>
@@ -193,7 +202,7 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
 
     }
 
-    // line 81
+    // line 84
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -202,13 +211,13 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 82
+        // line 85
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
 
     <script src=\"";
-        // line 84
+        // line 87
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/article_show.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -232,7 +241,7 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
 
     public function getDebugInfo()
     {
-        return array (  212 => 84,  206 => 82,  197 => 81,  179 => 71,  167 => 65,  160 => 61,  156 => 59,  152 => 58,  138 => 47,  130 => 42,  116 => 31,  105 => 23,  98 => 19,  93 => 17,  88 => 15,  83 => 13,  74 => 6,  65 => 5,  46 => 3,  15 => 1,);
+        return array (  221 => 87,  215 => 85,  206 => 84,  188 => 74,  176 => 68,  169 => 64,  165 => 62,  161 => 61,  147 => 50,  139 => 45,  125 => 34,  114 => 26,  110 => 25,  104 => 22,  98 => 19,  94 => 18,  88 => 15,  83 => 13,  74 => 6,  65 => 5,  46 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -249,16 +258,19 @@ class __TwigTemplate_677640b4a0498a3d0b4adeced98c53c72f0990f43f4744747039739df4c
             <div class=\"show-article-container p-3 mt-4\">
                 <div class=\"row\">
                     <div class=\"col-sm-12\">
-                        <img class=\"show-article-img\" src=\"{{ asset('images/asteroid.jpeg') }}\">
+                        <img class=\"show-article-img\" src=\"{{ asset(article.imagePath) }}\">
                         <div class=\"show-article-title-container d-inline-block pl-3 align-middle\">
                             <span class=\"show-article-title \">{{ article.title }}</span>
                             <br>
-                            <span class=\"align-left article-details\"><img class=\"article-author-img rounded-circle\" src=\"{{ asset('images/alien-profile.png') }}\"> Mike Ferengi </span>
+                            <span class=\"align-left article-details\">
+                                <img class=\"article-author-img rounded-circle\" src=\"{{ asset('images/alien-profile.png') }}\">
+                                {{  article.author }}
+                            </span>
                             <span class=\"pl-2 article-details\">
                                 {{ article.publishedAt ? article.publishedAt|ago : 'unpublished' }}
                             </span>
                             <span class=\"pl-2 article-details\">
-                                <span class=\"js-like-article-count\">5</span>
+                                <span class=\"js-like-article-count\">  {{  article.heartCount }} </span>
                                 <a href=\"{{ path('article_toggle_heart', {slug: article.slug}) }}\" class=\"fa fa-heart-o like-article js-like-article\"></a>
                             </span>
                         </div>
