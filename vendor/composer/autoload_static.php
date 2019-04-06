@@ -124,6 +124,7 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
             'Doctrine\\DBAL\\' => 14,
             'Doctrine\\Common\\Inflector\\' => 26,
             'Doctrine\\Common\\DataFixtures\\' => 29,
+            'Doctrine\\Common\\Collections\\' => 28,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
@@ -367,7 +368,7 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         ),
         'Http\\HttplugBundle\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-http/httplug-bundle',
+            0 => __DIR__ . '/..' . '/php-http/httplug-bundle/src',
         ),
         'Http\\Discovery\\' => 
         array (
@@ -375,9 +376,8 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         ),
         'Http\\Client\\Common\\Plugin\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-http/cache-plugin/src',
-            1 => __DIR__ . '/..' . '/php-http/logger-plugin/src',
-            2 => __DIR__ . '/..' . '/php-http/stopwatch-plugin/src',
+            0 => __DIR__ . '/..' . '/php-http/logger-plugin/src',
+            1 => __DIR__ . '/..' . '/php-http/stopwatch-plugin/src',
         ),
         'Http\\Client\\Common\\' => 
         array (
@@ -430,6 +430,10 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         'Doctrine\\Common\\DataFixtures\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures',
+        ),
+        'Doctrine\\Common\\Collections\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -503,10 +507,6 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
             'Doctrine\\Common\\Lexer\\' => 
             array (
                 0 => __DIR__ . '/..' . '/doctrine/lexer/lib',
-            ),
-            'Doctrine\\Common\\Collections\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/collections/lib',
             ),
         ),
     );

@@ -2,18 +2,17 @@
 
 namespace App\DataFixtures;
 use App\Entity\Article;
-use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class ArticleFixtures extends Fixture
+class ArticleFixtures extends BaseFixture
 {
-    public function load(ObjectManager $manager)
+    protected function loadData(ObjectManager $manager)
     {
-        $article = new Article();
-        $article->setTitle('Why Asteroids Taste Like Bacon')
-                ->setSlug('why-asteroids-taste-like-bacon-'.rand(100, 999))
-                ->setContent(
-                    <<<EOF
+    	$this->createMany(Article::class, 10, function (Article $article, $count) {
+	    $article->setTitle('Why Asteroids Taste Like Bacon')
+	            ->setSlug('why-asteroids-taste-like-bacon-'. $count)
+	            ->setContent(
+		            <<<EOF
 Spicy **jalapeno bacon** ipsum dolor amet veniam shank in dolore. Ham hock nisi landjaeger cow,
 lorem proident [beef ribs](https://baconipsum.com/) aute enim veniam ut cillum pork chuck picanha. Dolore reprehenderit
 labore minim pork belly spare ribs cupim short loin in. Elit exercitation eiusmod dolore cow
@@ -29,18 +28,19 @@ strip steak pork belly aliquip capicola officia. Labore deserunt esse chicken lo
 cow est ribeye adipisicing. Pig hamburger pork belly enim. Do porchetta minim capicola irure pancetta chuck
 fugiat.
 EOF
-                );
+	            );
 
-        // publish most articles
-        if (rand(1, 10) > 2) {
-            $article->setPublishedAt(new \DateTime(sprintf('-%d days', rand(1, 100))));
-        }
+	    // publish most articles
+	    if (rand(1, 10) > 2) {
+		    $article->setPublishedAt(new \DateTime(sprintf('-%d days', rand(1, 100))));
+	    }
 
-        $article->setAuthor('Laura Ortuno')
-                ->setHeartCount(rand(0,100))
-                ->setImageFilename('asteroid.jpeg');
+	    $article->setAuthor('Laura Ortuno')
+	            ->setHeartCount(rand(0,100))
+	            ->setImageFilename('asteroid.jpeg');
 
-        $manager->persist($article);
+	    });
+
         $manager->flush();
     }
 }
