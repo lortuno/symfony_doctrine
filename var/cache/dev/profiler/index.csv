@@ -89,3 +89,16 @@ c0b004,127.0.0.1,GET,http://localhost:8000/,1554547109,,200
 563829,127.0.0.1,GET,http://localhost:8010/,1554548900,,200
 91e51f,127.0.0.1,GET,http://localhost:8010/,1554549340,,200
 b68417,::1,GET,http://localhost:8010/,1554550834,,200
+d16c53,127.0.0.1,GET,http://localhost:8010/,1554560362,,200
+6b6f25,127.0.0.1,GET,http://localhost:8010/,1554560396,,200
+ecca45,127.0.0.1,GET,http://localhost:8010/news/why-asteroids-taste-like-bacon-6,1554560411,,200
+8d60b4,127.0.0.1,GET,http://localhost:8010/news/why-asteroids-taste-like-bacon-5,1554560417,,200
+2e8ed5,127.0.0.1,GET,http://localhost:8010/,1554560962,,200
+c6a4e0,127.0.0.1,GET,http://localhost:8010/news/eum-aperiam-quas-quam-delectus,1554560983,,200
+20ea50,127.0.0.1,GET,http://localhost:8010/news/eveniet-numquam-possimus-et-repudiandae-sit-nihil,1554560997,,200
+63e700,::1,GET,http://localhost:8010/news/eveniet-numquam-possimus-et-repudiandae-sit-nihil,1554561062,08db50,200
+08db50,::1,GET,http://localhost:8010/news/eveniet-numquam-possimus-et-repudiandae-sit-nihil,1554561062,,404
+d54cdb,::1,GET,http://localhost:8010/,1554561068,,200
+dbf4cf,::1,GET,http://localhost:8010/news/sapiente-est-delectus-id-earum-sequi-eos-magni,1554561079,,200
+5a24b8,::1,GET,http://localhost:8010/news/debitis-et-explicabo-minima,1554561095,,200
+c8ab6a,::1,GET,http://localhost:8010/news/qui-sed-magni-eveniet-quis,1554561110,,200

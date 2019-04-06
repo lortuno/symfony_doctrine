@@ -112,6 +112,10 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
         ),
+        'F' => 
+        array (
+            'Faker\\' => 6,
+        ),
         'E' => 
         array (
             'EasyCorp\\EasyLog\\' => 17,
@@ -402,6 +406,10 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Faker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker',
         ),
         'EasyCorp\\EasyLog\\' => 
         array (
