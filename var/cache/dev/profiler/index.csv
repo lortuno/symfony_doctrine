@@ -109,3 +109,5 @@ ce5604,::1,GET,http://localhost:8000/news/voluptatum-voluptate-autem-temporibus-
 bb489a,::1,GET,http://localhost:8000/,1554663484,,200
 c6db5c,::1,GET,http://localhost:8000/news/once-upon-a-time-this-was-good-1,1554663488,,200
 abb0bd,::1,GET,http://localhost:8000/news/once-upon-a-time-this-was-good,1554663497,,200
+45dfe6,::1,GET,http://localhost:8000/news/once-upon-a-time-this-was-good,1554666648,,200
+b13b36,::1,GET,http://localhost:8000/,1554666655,,200
