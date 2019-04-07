@@ -32,7 +32,6 @@ class ArticleFixtures extends BaseFixture
     {
     	$this->createMany(Article::class, 10, function (Article $article, $count) {
 	    $article->setTitle($this->faker->randomElement(self::$articleTitles))
-	            ->setSlug($this->faker->slug())
 	            ->setContent($this->faker->paragraphs(5, true)
 	            );
 

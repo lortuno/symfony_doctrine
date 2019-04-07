@@ -102,3 +102,10 @@ d54cdb,::1,GET,http://localhost:8010/,1554561068,,200
 dbf4cf,::1,GET,http://localhost:8010/news/sapiente-est-delectus-id-earum-sequi-eos-magni,1554561079,,200
 5a24b8,::1,GET,http://localhost:8010/news/debitis-et-explicabo-minima,1554561095,,200
 c8ab6a,::1,GET,http://localhost:8010/news/qui-sed-magni-eveniet-quis,1554561110,,200
+c5ed33,::1,GET,http://localhost:8000/,1554663231,,200
+2bda90,::1,GET,http://localhost:8000/,1554663273,,200
+ce5604,::1,GET,http://localhost:8000/news/voluptatum-voluptate-autem-temporibus-corrupti,1554663276,,200
+419a45,::1,GET,http://localhost:8000/news/nihil-non-deleniti-autem-qui-sunt-sed-vel,1554663301,,200
+bb489a,::1,GET,http://localhost:8000/,1554663484,,200
+c6db5c,::1,GET,http://localhost:8000/news/once-upon-a-time-this-was-good-1,1554663488,,200
+abb0bd,::1,GET,http://localhost:8000/news/once-upon-a-time-this-was-good,1554663497,,200
