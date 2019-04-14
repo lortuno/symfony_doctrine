@@ -28,6 +28,7 @@ class CommentFixtures extends BaseFixture implements DependentFixtureInterface {
 				$comment->setContent($this->faker->boolean ? $this->faker->paragraph : $this->faker->randomElement(self::$articleComments));
 				$comment->setAuthorName($this->faker->name);
 				$comment->setCreatedAt($this->faker->dateTimeBetween('-1 months', '-1 seconds'));
+				$comment->setIsPublished($this->faker->boolean(80));
 				$comment->setArticle($this->getRandomReference(Article::class));
 			}
 		);
