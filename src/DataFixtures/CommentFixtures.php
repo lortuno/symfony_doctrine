@@ -4,9 +4,10 @@ namespace App\DataFixtures;
 
 use App\Entity\Article;
 use App\Entity\Comment;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class CommentFixture extends BaseFixture {
+class CommentFixtures extends BaseFixture implements DependentFixtureInterface {
 	private static $articleComments = [
 		'This blog sucks',
 		'Why are we writing here¡',
@@ -17,7 +18,7 @@ class CommentFixture extends BaseFixture {
 	];
 
 	protected function loadData(ObjectManager $manager) {
-		$randomComments = rand(1, 50);
+		$randomComments = rand(30, 100);
 
 		$this->createMany(
 			Comment::class,
@@ -27,10 +28,14 @@ class CommentFixture extends BaseFixture {
 				$comment->setContent($this->faker->boolean ? $this->faker->paragraph : $this->faker->randomElement(self::$articleComments));
 				$comment->setAuthorName($this->faker->name);
 				$comment->setCreatedAt($this->faker->dateTimeBetween('-1 months', '-1 seconds'));
-				$comment->setArticle($this->getReference(Article::class . '_'.$this->faker->numberBetween(0, 9)));
+				$comment->setArticle($this->getRandomReference(Article::class));
 			}
 		);
 
 		$manager->flush();
+	}
+
+	public function getDependencies() {
+		return [ArticleFixtures::class];
 	}
 }
