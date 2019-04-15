@@ -95,6 +95,7 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         ),
         'K' => 
         array (
+            'Knp\\Bundle\\PaginatorBundle\\' => 27,
             'Knp\\Bundle\\MarkdownBundle\\' => 26,
         ),
         'H' => 
@@ -368,6 +369,10 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         array (
             0 => __DIR__ . '/..' . '/michelf/php-markdown/Michelf',
         ),
+        'Knp\\Bundle\\PaginatorBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/knplabs/knp-paginator-bundle',
+        ),
         'Knp\\Bundle\\MarkdownBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/knplabs/knp-markdown-bundle',
@@ -524,6 +529,10 @@ class ComposerStaticInit6e6da0764d9c86c95e736981afb7b423
         ),
         'K' => 
         array (
+            'Knp\\Component' => 
+            array (
+                0 => __DIR__ . '/..' . '/knplabs/knp-components/src',
+            ),
             'Knp\\Bundle\\TimeBundle' => 
             array (
                 0 => __DIR__ . '/..' . '/knplabs/knp-time-bundle',
