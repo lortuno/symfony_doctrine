@@ -32,31 +32,32 @@ class ArticleFixtures extends BaseFixture implements DependentFixtureInterface {
 		'Stephen Hawkings',
 	];
 
-	protected function loadData(ObjectManager $manager) {
-		$this->createMany(
-			Article::class,
-			10,
-			function (Article $article, $count) use ($manager) {
-				$article->setTitle($this->faker->randomElement(self::$articleTitles))
-				        ->setContent(
-					        $this->faker->paragraphs(5, true)
-				        );
+	protected function loadData(ObjectManager $manager)
+	{
+		$this->createMany(10, 'main_articles', function($count) use ($manager) {
+			$article = new Article();
+			$article->setTitle($this->faker->randomElement(self::$articleTitles))
+				->setContent(
+					$this->faker->paragraphs(5, true)
+				);
 
-				// publish most articles
-				if ($this->faker->boolean(65)) {
-					$article->setPublishedAt($this->faker->dateTimeBetween('-99 days', '-2 hours'));
-				}
-
-				$article->setAuthor($this->faker->randomElement(self::$articleAuthors))
-				        ->setHeartCount($this->faker->numberBetween(5, 100))
-				        ->setImageFilename($this->faker->randomElement(self::$articleImages));
-
-				$tags = $this->getRandomReferences(Tag::class, $this->faker->numberBetween(0, 5));
-				foreach ($tags as $tag) {
-					$article->addTag($tag);
-				}
+			// publish most articles
+			if ($this->faker->boolean(70)) {
+				$article->setPublishedAt($this->faker->dateTimeBetween('-100 days', '-1 hours'));
 			}
-		);
+
+			$article->setAuthor($this->faker->randomElement(self::$articleAuthors))
+			        ->setHeartCount($this->faker->numberBetween(5, 100))
+			        ->setImageFilename($this->faker->randomElement(self::$articleImages))
+			;
+
+			$tags = $this->getRandomReferences('main_tags', $this->faker->numberBetween(0, 5));
+			foreach ($tags as $tag) {
+				$article->addTag($tag);
+			}
+
+			return $article;
+		});
 
 		$manager->flush();
 	}

@@ -17,21 +17,18 @@ class CommentFixtures extends BaseFixture implements DependentFixtureInterface {
 		'Go go power rangers',
 	];
 
-	protected function loadData(ObjectManager $manager) {
-		$randomComments = rand(30, 100);
+	protected function loadData(ObjectManager $manager)
+	{
+		$this->createMany(100, 'main_comments', function() {
+			$comment = new Comment();
+			$comment->setContent($this->faker->boolean ? $this->faker->paragraph : $this->faker->randomElement(self::$articleComments));
+			$comment->setAuthorName($this->faker->name);
+			$comment->setCreatedAt($this->faker->dateTimeBetween('-1 months', '-1 seconds'));
+			$comment->setIsPublished($this->faker->boolean(80));
+			$comment->setArticle($this->getRandomReference('main_articles'));
 
-		$this->createMany(
-			Comment::class,
-			$randomComments,
-			function (Comment $comment) {
-
-				$comment->setContent($this->faker->boolean ? $this->faker->paragraph : $this->faker->randomElement(self::$articleComments));
-				$comment->setAuthorName($this->faker->name);
-				$comment->setCreatedAt($this->faker->dateTimeBetween('-1 months', '-1 seconds'));
-				$comment->setIsPublished($this->faker->boolean(80));
-				$comment->setArticle($this->getRandomReference(Article::class));
-			}
-		);
+			return $comment;
+		});
 
 		$manager->flush();
 	}

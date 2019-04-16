@@ -28,6 +28,8 @@ class ArticleRepository extends ServiceEntityRepository
         $qb = $this->createQueryBuilder('a');
 
         return $this->addIsPublishedQueryBuilder($qb)
+			        ->leftJoin('a.tags', 't')
+			        ->addSelect('t')
                     ->orderBy('a.publishedAt', 'DESC')
                     ->getQuery()
                     ->getResult();
