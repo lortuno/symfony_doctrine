@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 include_once $this->targetDirs[3].'/src/Helper/LoggerTrait.php';
 include_once $this->targetDirs[3].'/src/Service/SlackClient.php';
 
-$this->privates['App\Service\SlackClient'] = $instance = new \App\Service\SlackClient(($this->services['nexy_slack.client'] ?? $this->load('getNexySlack_ClientService.php')));
+$this->privates['App\Service\SlackClient'] = $instance = new \App\Services\SlackClient(($this->services['nexy_slack.client'] ?? $this->load('getNexySlack_ClientService.php')));
 
 $instance->setLogger(($this->privates['monolog.logger'] ?? $this->load('getMonolog_LoggerService.php')));
 

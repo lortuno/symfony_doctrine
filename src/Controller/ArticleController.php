@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use App\Repository\ArticleRepository;
-use App\Service\MarkdownHelper;
-use App\Service\SlackClient;
+use App\Services\MarkdownHelper;
+use App\Services\SlackClient;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

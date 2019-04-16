@@ -16,4 +16,4 @@ $b->pushHandler(($this->privates['monolog.handler.console'] ?? $this->privates['
 $b->pushHandler($a);
 $b->pushHandler(($this->privates['monolog.handler.main'] ?? $this->getMonolog_Handler_MainService()));
 
-return $this->privates['App\Service\MarkdownHelper'] = new \App\Service\MarkdownHelper(($this->services['cache.app'] ?? $this->getCache_AppService()), ($this->services['markdown.parser'] ?? $this->services['markdown.parser'] = new \Knp\Bundle\MarkdownBundle\Parser\Preset\Light()), $b, true);
+return $this->privates['App\Service\MarkdownHelper'] = new \App\Services\MarkdownHelper(($this->services['cache.app'] ?? $this->getCache_AppService()), ($this->services['markdown.parser'] ?? $this->services['markdown.parser'] = new \Knp\Bundle\MarkdownBundle\Parser\Preset\Light()), $b, true);

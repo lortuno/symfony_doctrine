@@ -25,6 +25,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'article_show' => [['slug'], ['_controller' => 'App\\Controller\\ArticleController::show'], [], [['variable', '/', '[^/]++', 'slug'], ['text', '/news']], [], []],
         'article_toggle_heart' => [['slug'], ['_controller' => 'App\\Controller\\ArticleController::toggleArticleHeart'], [], [['text', '/heart'], ['variable', '/', '[^/]++', 'slug'], ['text', '/news']], [], []],
         'comment_admin' => [[], ['_controller' => 'App\\Controller\\CommentAdminController::index'], [], [['text', '/admin/comment']], [], []],
+        'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
         '_twig_error_test' => [['code', '_format'], ['_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format'], ['variable', '/', '\\d+', 'code'], ['text', '/_error']], [], []],
         '_wdt' => [['token'], ['_controller' => 'web_profiler.controller.profiler::toolbarAction'], [], [['variable', '/', '[^/]++', 'token'], ['text', '/_wdt']], [], []],
         '_profiler_home' => [[], ['_controller' => 'web_profiler.controller.profiler::homeAction'], [], [['text', '/_profiler/']], [], []],

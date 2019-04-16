@@ -453,6 +453,13 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\CommentAdminController"/>
       </call>
     </service>
+    <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\SecurityController"/>
+      </call>
+    </service>
     <service id="App\DataFixtures\ArticleFixtures" class="App\DataFixtures\ArticleFixtures" public="false" autowire="true" autoconfigure="true">
       <tag name="doctrine.fixture.orm"/>
     </service>
@@ -482,13 +489,13 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Service\MarkdownHelper" class="App\Service\MarkdownHelper" public="false" autowire="true" autoconfigure="true">
+    <service id="App\Services\MarkdownHelper" class="App\Services\MarkdownHelper" public="false" autowire="true" autoconfigure="true">
       <argument type="service" id="cache.app"/>
       <argument type="service" id="markdown.parser.light"/>
       <argument type="service" id="monolog.logger.markdown"/>
       <argument>true</argument>
     </service>
-    <service id="App\Service\SlackClient" class="App\Service\SlackClient" public="false" autowire="true" autoconfigure="true">
+    <service id="App\Services\SlackClient" class="App\Services\SlackClient" public="false" autowire="true" autoconfigure="true">
       <argument type="service" id="nexy_slack.client"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger"/>
@@ -497,7 +504,7 @@
     <service id="App\Twig\AppExtension" class="App\Twig\AppExtension" public="false" autowire="true" autoconfigure="true">
       <tag name="twig.extension"/>
       <tag name="container.service_subscriber"/>
-      <argument type="service" id=".service_locator.iGXbXeX.App\Twig\AppExtension"/>
+      <argument type="service" id=".service_locator.9WGIYI8.App\Twig\AppExtension"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -1812,14 +1819,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4288,6 +4287,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CommentAdminController" class="App\Controller\CommentAdminController" public="false" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CommentAdminController" class="App\Controller\CommentAdminController" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\CommentAdminController" class="App\Controller\CommentAdminController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\ArticleFixtures" class="App\DataFixtures\ArticleFixtures" public="false" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\ArticleFixtures" class="App\DataFixtures\ArticleFixtures" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\CommentFixtures" class="App\DataFixtures\CommentFixtures" public="false" autowire="true" abstract="true"/>
@@ -4482,11 +4484,11 @@
         <argument key="repository" type="service" id="App\Repository\ArticleRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.FwJXtGu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.RVyyucT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="article" type="service" id=".errored..service_locator.FwJXtGu.App\Entity\Article"/>
-        <argument key="slack" type="service" id="App\Service\SlackClient"/>
+        <argument key="article" type="service" id=".errored..service_locator.RVyyucT.App\Entity\Article"/>
+        <argument key="slack" type="service" id="App\Services\SlackClient"/>
       </argument>
     </service>
     <service id=".service_locator.QgkYhAw" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4504,19 +4506,27 @@
         <argument key="paginator" type="service" id="knp_paginator"/>
       </argument>
     </service>
-    <service id=".service_locator.iGDAoe5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.EbLunuf" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="authenticationUtils" type="service" id="security.authentication_utils"/>
+      </argument>
+    </service>
+    <service id=".service_locator.LSMmfm5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\ArticleAdminController::new" type="service" id=".service_locator.pe89cNF"/>
         <argument key="App\Controller\ArticleController::homepage" type="service" id=".service_locator.l8t5dvN"/>
-        <argument key="App\Controller\ArticleController::show" type="service" id=".service_locator.FwJXtGu"/>
+        <argument key="App\Controller\ArticleController::show" type="service" id=".service_locator.RVyyucT"/>
         <argument key="App\Controller\ArticleController::toggleArticleHeart" type="service" id=".service_locator.QgkYhAw"/>
         <argument key="App\Controller\CommentAdminController::index" type="service" id=".service_locator.0zn6spy"/>
+        <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.EbLunuf"/>
         <argument key="App\Controller\ArticleAdminController:new" type="service" id=".service_locator.pe89cNF"/>
         <argument key="App\Controller\ArticleController:homepage" type="service" id=".service_locator.l8t5dvN"/>
-        <argument key="App\Controller\ArticleController:show" type="service" id=".service_locator.FwJXtGu"/>
+        <argument key="App\Controller\ArticleController:show" type="service" id=".service_locator.RVyyucT"/>
         <argument key="App\Controller\ArticleController:toggleArticleHeart" type="service" id=".service_locator.QgkYhAw"/>
         <argument key="App\Controller\CommentAdminController:index" type="service" id=".service_locator.0zn6spy"/>
+        <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.EbLunuf"/>
       </argument>
     </service>
     <service id=".service_locator.yQVjGlt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4788,17 +4798,23 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
-    <service id=".service_locator.iGXbXeX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.KTVqfp6.App\Controller\SecurityController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\SecurityController"/>
+      <argument>App\Controller\SecurityController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
+    <service id=".service_locator.9WGIYI8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="mkd" type="service" id="App\Service\MarkdownHelper"/>
+        <argument key="mkd" type="service" id="App\Services\MarkdownHelper"/>
       </argument>
     </service>
-    <service id=".service_locator.iGXbXeX.App\Twig\AppExtension" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.9WGIYI8.App\Twig\AppExtension" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Twig\AppExtension"/>
       <argument>App\Twig\AppExtension</argument>
       <argument type="service" id="service_container"/>
-      <factory service=".service_locator.iGXbXeX" method="withContext"/>
+      <factory service=".service_locator.9WGIYI8" method="withContext"/>
     </service>
     <service id=".service_locator._pu.0Tb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -4920,11 +4936,11 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.iGDAoe5"/>
+      <argument type="service" id=".service_locator.LSMmfm5"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
-    <service id=".errored..service_locator.FwJXtGu.App\Entity\Article" class="App\Entity\Article"/>
+    <service id=".errored..service_locator.RVyyucT.App\Entity\Article" class="App\Entity\Article"/>
     <service id=".errored..service_locator.QgkYhAw.App\Entity\Article" class="App\Entity\Article"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.9ZhNIs3"/>
@@ -5230,7 +5246,7 @@
     <service id="security.authentication.session_strategy.main" alias="security.authentication.session_strategy"/>
     <service id="security.user_checker.main" alias="security.user_checker" public="false"/>
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.iGDAoe5"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.LSMmfm5"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="translator.data_collector.inner" alias="translator.default" public="false"/>

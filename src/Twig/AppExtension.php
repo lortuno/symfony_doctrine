@@ -5,7 +5,7 @@ namespace App\Twig;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
-use App\Service\MarkdownHelper;
+use App\Services\MarkdownHelper;
 //use Symfony\Component\DependencyInjection\ServiceSubscriberInterface;
 use Symfony\Contracts\Service\ServiceSubscriberInterface;
 use Psr\Container\ContainerInterface;
